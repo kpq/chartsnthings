@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>All the passes - U.S. women's soccer</title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">12 Aug 2012</p>
+<h2>All the passes - U.S. women's soccer</h2>
+
+<div class="post">
+<p>A few months ago, during the Euro 2012 soccer tournament, I remember watching the Spain-France match, and like everyone who&#8217;s ever seen Spain play, was really surprised by how easily they outpassed their opponents. I wanted to make a chart of their passes – not a network diagram of who passed to who, but a chart of where the passes themselves were. My colleague <a href="https://twitter.com/xocasgv" title="xocas" target="_blank">Xaquín G.V.</a>, who had done many of our soccer visualization in the World Cup in 2010, told me to talk to <a href="http://www.optasports.com/" title="opta" target="_blank">Opta</a>, a company that specializes in this kind game data.</p>
+<p>A few emails, phone calls and data monkeying sessions later, my colleague <a href="https://twitter.com/blueshirt" title="blueshirt" target="_blank">Jeremy White</a> and I had made charts for every player, highlighting short passes, that we really liked:</p>
+<p><img align="middle" alt="spain" src="http://farm9.staticflickr.com/8293/7769678424_a939f9dc06_c.jpg" width="800"/></p>
+<p>Alas, there was not enough time to finish it, so on the shelf it went.</p>
+<p>But when the U.S. women made it to the Gold medal match, the code was right there to use again. Jeremy was busy visualizing the <a href="http://www.nytimes.com/interactive/2012/08/09/sports/olympics/new-olympic-stars-of-twitter.html" title="twitter olympics" target="_blank">Twitter Olympics</a>, but Xaquín and Amanda Cox pitched in some soccer knowledge and gross XML parsing so we could make and interpret similar charts. After a lot of trial and error, we had mapped all the passes for all the U.S. players over the course of the entire tournament (made using R&#8217;s basic plot and segments commands):</p>
+<p><img align="middle" alt="all the passes ever" src="http://farm9.staticflickr.com/8295/7769679592_aa97aaae05_o.jpg" width="800"/></p>
+<p>We still needed some help understanding it, so we got in touch with Jay Cooney, an assistant coach at Stanford who had coached a some of the players on the national team. But instead of just asking him &#8220;what did you think of the games?&#8221; we were able to ask &#8220;what do these charts tell you?&#8221; Giving our source all the charts ahead of time ultimately helped us choose who to highlight and made for much more useful annotation. There certainly could have been more, but we were on a tight deadline and ultimately had to turn it around, start to finish, in about 12 hours. Here&#8217;s the <a href="http://www.nytimes.com/interactive/2012/08/10/sports/olympics/passing-patterns-of-the-uss-top-playmakers.html" title="final graphic" target="_blank">final graphic</a>, with some nice design touches from Xaquín:</p>
+<p><a href="http://www.nytimes.com/interactive/2012/08/10/sports/olympics/passing-patterns-of-the-uss-top-playmakers.html" title="final v2" target="_blank"><img align="middle" alt="final v" src="http://farm9.staticflickr.com/8427/7769679914_8c8db0e5db_o.jpg" width="800"/></a></p>
+
+</div>
+
+
+          <div class="footer">
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

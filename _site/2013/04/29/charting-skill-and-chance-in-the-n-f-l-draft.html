@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Charting Skill and Chance in the N.F.L. Draft </title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">29 Apr 2013</p>
+<h2>Charting Skill and Chance in the N.F.L. Draft </h2>
+
+<div class="post">
+<p>Last week we published an <a href="http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html" title="link" target="_blank">interactive graphic</a> about the N.F.L. draft. Our goal was to show an odd reality: even though N.F.L. teams do tend to pick the &#8220;best&#8221; players early in the draft, there&#8217;s a tremendous amount of chance involved. The best 10 eventual N.F.L. performers will not be the first 10 players drafted – or even close.</p>
+<p>How to know that both of these are true and decide which is most important? We used <a href="http://www.pro-football-reference.com/draft/" title="draft data" target="_blank">draft</a> and <a href="http://www.pro-football-reference.com/blog/?page_id=518" title="performance" target="_blank">performance</a> data from <a href="http://pro-football-reference.com" title="http://www.pro-football-reference.com" target="_blank">pro-football-reference.com</a>. (One note: N.F.L. performance is hard to measure across positions – how do you decide if a tight end is &#8220;better&#8221; than a linebacker or a defensive tackle? Most analyses use a combination of games started and pro bowls; the one developed by <a href="http://www.pro-football-reference.com/blog/?page_id=518" title="methods" target="_blank">pro-football-reference</a> uses both of those but has some fine-tuning by position.)</p>
+<p>So, for for every pick in the draft, we have one number encompassing their N.F.L. performance. Here are the top 20 since 1995:</p>
+<p><img alt="image" class="small-image" src="http://farm9.staticflickr.com/8259/8693252132_150c6a81d2.jpg"/></p>
+<p>Here&#8217;s a first sketch, where every dot represents one player. The Y axis is &#8220;how good&#8221; every player is, and the X axis is where in the draft they were selected. I actually screwed something up here – there aren&#8217;t more than 250 or so picks in a draft – but otherwise the distribution is more or less right:</p>
+<p><img alt="image" src="http://farm9.staticflickr.com/8538/8693251984_bd2c9edc7e_c.jpg"/>My colleague Mike Bostock cleaned this up by coloring the picks by round and adding some labels:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7055/8689657170_a19e597d27_c.jpg"/></p>
+<p>Although that shows all the data, it&#8217;s too noisy to really interpret. Wanting to simplify this, I tried taking the average of all players who went at a certain round and certain pick – here, each dot represents the average value of all players at a certain pick (for example, the players drafted at Round 1, Pick 1, or Round 2, Pick 13). As before, the dots are colored by round:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7047/8688378359_4cfe2b1b9a_c.jpg"/></p>
+<p>The dot on the top-left represents the average value of <strong>all</strong> first picks in the draft since 1995 – on average, this group, which includes Peyton Manning, Cam Newton, Andrew Luck, Michael Vick, Keyshawn Johnson and others, clearly outperforms the other picks. (This is might be obvious, but then again, the group also includes Tim Couch and <a href="http://www.pro-football-reference.com/players/R/RussJa00.htm" title="J. Russell">JaMarcus Russell</a>.)</p>
+<p>I admit I liked this chart more than I probably should have. (My colleagues corrected me!) Averaging this way is a little misleading because every round doesn&#8217;t have the same number of picks (the league has grown and there are extra picks at the end of each round, which leads to some funny business with the math), and hiding the distribution oversimplifies things a little. But this chart does make a simple point – the better players tend to go first.</p>
+<p>Instead, Mike offered a boxplot, which shows the distribution without being so noisy:</p>
+<p><img alt="image" class="small-image" src="http://farm9.staticflickr.com/8530/8689657318_355054d8f7_o.png"/></p>
+<p>Even this was a little too busy for the point we wanted to make, so we settled for a small bar chart.</p>
+<p><img alt="image" class="small-image" src="http://farm9.staticflickr.com/8124/8695066888_7718e10e2d_o.png"/></p>
+<p>What we wanted to focus on was the reality that there&#8217;s much more randomness in the draft than people realize. <a href="https://twitter.com/bcmassey" title="Cade Massey">Cade Massey</a> and Richard H. Thaler, behavioral psychologists, analyzed the draft and found that not only is there no persistent skill among teams in picking players – teams have good years and bad years in equal measure – but that across all players and positions, teams only picked a player better than the person who went next at that position 52 percent of the time. Their academic paper is <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=697121" title="losers curse" target="_blank">here</a>, but Massey explained this in a much more accessible way in a <a href="http://www.sloansportsconference.dreamhosters.com/?p=1619" title="video" target="_blank">recent talk</a> at the Sloan/MIT sports analytics conference. </p>
+<p>I took a stab at replicating some of their findings just to see what it would look like. Here&#8217;s a rough chart of the percentage of teams picking a player who ended up being better than the guy drafted after him at the same position. For example, if you chose Peyton Manning (Pick 1 in the 1998 draft) over <a href="http://www.pro-football-reference.com/players/L/LeafRy00.htm" title="Leaf" target="_blank">Ryan Leaf</a> (Pick 2), your guy is better than the next guy at that position, but if you chose <a href="http://www.pro-football-reference.com/players/W/WynnSp00.htm" title="Spergon!" target="_blank">Spergon Wynn</a> (Pick 183 in the 2000 draft) over Tom Brady (Pick 199), you did not. (Sorry, Cleveland Browns.)</p>
+<p><img alt="image" class="small-image" src="http://farm9.staticflickr.com/8399/8690910724_f07079eb3f_z.jpg"/></p>
+<p>Simply put, teams don&#8217;t pick the &#8220;right&#8221; player as often as you think, and tend to do better than a coin flip only in the first round. This chart goes under 50 percent after the third round, but that reflects some noise in the data towards the end of the draft – most of these players don&#8217;t actually get in the game, so it&#8217;s not very meaningful to say that one benchwarmer is marginally better than another. But this concept is hard to explain in a chart like this (the title would be something like &#8220;percent of players who were better than the next player at the same position by round&#8221;), so we took a simpler approach.</p>
+<p>I had been tinkering on a version of a chart I had that showed where the best eventual players were drafted:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7043/8688378777_47deecf975_b.jpg"/></p>
+<p>This chart highlights where the 10 &#8220;best&#8221; players in each draft were picked. My colleague Joe Ward thought it would look good in print, where we have more space, and this chart ended up closely resembling what was eventually printed:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7046/8690129489_f571afd745_o.png"/></p>
+<p>Online, Shan Carter suggested an interface that showed this uncertainty with two sentences: the percent of the best players that came in the first round and the percent that came after:</p>
+<p><img alt="image" src="http://farm9.staticflickr.com/8394/8693252042_83b18b9893_c.jpg"/></p>
+<p>A slider and about a hundred commits later, you have an tool that lets you explore where the best N players from the draft came from every year.</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7046/8690145797_db01ca107e_c.jpg"/></p>
+<p>Mike also made a similar implementation based on the <a href="http://bost.ocks.org/mike/shuffle/" title="whaa?">Fisher-Yates shuffle</a>, which is a thing I learned about when he showed me, but it wasn&#8217;t the right application for this data, and anyway it was getting too late to change our minds:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7049/8688538281_ebd9709004_c.jpg"/></p>
+<p>These charts and sketches were made in R and D3. Normally, at the end of these posts, I write about how other people implemented the best parts of this graphic, but this time it&#8217;s especially true. </p>
+<p>One of the great things about working in a department with a staff of 25 people is that you can be in big trouble three days before something publishes. Then you make a phone call to San Francisco and everything works out fine.</p>
+
+</div>
+
+
+          <div class="footer">
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

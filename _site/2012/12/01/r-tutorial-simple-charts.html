@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>R tutorial: Simple charts</title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">01 Dec 2012</p>
+<h2>R tutorial: Simple charts</h2>
+
+<div class="post">
+<p>Here&#8217;s a (still getting tweaked) R tutorial for the charts in the last post. Here&#8217;s <a href="https://docs.google.com/file/d/0B8Jrqt3yp-JyM2JPUlZsbnBvNFk/edit" title="data" target="_blank">the data</a> you&#8217;ll need to download.</p>
+<p>Set your working directory to wherever you want to work out of (usually a project folder)</p>
+<p><code>setwd("/Users/pathToMyFolder...")</code></p>
+<p>Next, load the data. Any format is fine, but our data is a tab-delimited .txt files, so we can use read.delim (here, my data is in a folder called &#8220;data,&#8221; but yours can be wherever).</p>
+<p><code>data &lt;- read.delim("data/states-data.txt")</code></p>
+<p>Make a new field in your data frame that is the sum of unified states:</p>
+<p><code>data$total.unified &lt;- data$Unified.D+data$Unified.R</code></p>
+<p>Now our data is ready to chart. It&#8217;s just one line of code to make a plot of the number of unified states over time, with &#8220;Year&#8221; on the x axis and &#8220;total.unified&#8221; on the Y axis:</p>
+<p><code>plot(data$Year,data$total.unified,type='l',ylim=c(0,50))</code></p>
+<p><img align="middle" alt="shot1" src="http://farm9.staticflickr.com/8341/8229057526_2b16a041b9_b.jpg" width="1024"/></p>
+<p>The same plot, with extra arguments to clean it up a little:</p>
+<p><code>plot(data$Year,data$total.unified,type='l',ylim=c(0,50),xlab="Year",ylab="States",main="States with unified control of state government since 1938",col="red",lwd=3)</code> <code>abline(h=c(0,10,20,30,40,50),col='lightgrey')</code> <code>abline(v=c(1940,1960,1980,2000),col='lightgrey')</code></p>
+<p><img align="middle" alt="clean" src="http://farm9.staticflickr.com/8059/8235517137_46a71d643d_b.jpg" width="987"/></p>
+<p>Adding more layers onto the plot, drawing lines for Democratic- and Republican- unified states. (In general, &#8220;plot&#8221; makes a chart and &#8220;lines&#8221; add to an existing plot.)</p>
+<p><code>plot(data$Year,data$Divided,type='l',ylim=c(0,30))</code> <code>lines(data$Year,data$Unified.R,col="red")</code> <code>lines(data$Year,data$Unified.D,col="blue")</code></p>
+<p><img align="middle" alt="img2" src="http://farm9.staticflickr.com/8198/8227990917_c42677661f_o.png" width="1070"/></p>
+<p>Now we&#8217;ll make a barplot instead. The syntax here is a little weird, and I had to get Amanda to fix mine originally, but it&#8217;s not so bad. Basically, our data needs to be transposed and reduced to just the columns we want to plot. You can do this in one step, but for clarity I&#8217;ll break it up here. It looks like a waffle chart just because of the horizontal axis lines, but it&#8217;s just a barplot.</p>
+<p><code><code>#just the numbers we want to plot <code>data.we.need&lt;-data[,c("Unified.D","Divided","Unified.R")] </code> <code>#a simple reshaping, transposing our data</code> <code>transposed&lt;-t(data.we.need) </code> <code>barplot(transposed,ylim=c(0,50),col=c('blue','grey','red'),border=F)</code> <code>abline(h=c(1:50),col='white')</code></code></code></p>
+<p><img align="middle" alt="waffle" src="http://farm9.staticflickr.com/8206/8229057376_4682f39694_o.png" width="955"/></p>
+<p>We end up doing the same plot for the final output; it&#8217;s just shaped differently and has fewer axis lines. We&#8217;re also saving it as a pdf in the dimensions we want:</p>
+<p><code>pdf(file="stacked-bars.pdf",width=8,height=5) <code><span class="Apple-tab-span"> </span>barplot(transposed,ylim=c(0,50),col=c('blue','grey','red'))</code> <code><span class="Apple-tab-span"> </span>abline(h=c(10,20,30,40),col='white')</code> <code>dev.off()</code></code></p>
+<p><img align="middle" alt="img3" src="http://farm9.staticflickr.com/8067/8227991027_e5dd24f515_o.jpg" width="1043"/></p>
+<div></div>
+<p>Ship that!</p>
+
+</div>
+
+
+          <div class="footer">
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

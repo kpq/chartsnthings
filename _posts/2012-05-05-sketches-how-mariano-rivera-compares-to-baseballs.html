@@ -1,0 +1,21 @@
+---
+layout: post
+title: 'Sketches: How Mariano Rivera Compares to Baseball’s Best Closers'
+date: '2012-05-05T17:26:00-04:00'
+tags:
+- data sketches
+- Before and After
+tumblr_url: http://chartsnthings.tumblr.com/post/22471358872/sketches-how-mariano-rivera-compares-to-baseballs
+---
+<p>One of the best things about working at a newspaper is that you can come into work and do something different every day. Yesterday I had planned on spending the day doing some longer-term work in preparation for the Olympics and generally phoning it in Friday-style when a handful of us got assigned a daily – a graphic that looked back on Mariano Rivera&#8217;s career in light of his <a href="http://www.nytimes.com/2012/05/05/sports/baseball/rivera-says-he-will-make-comeback-in-2013.html?ref=baseball" title="acl injury" target="_blank">A.C.L. injury on Thursday</a>. I was totally going to do an <a href="http://www.nytimes.com/interactive/2012/04/13/sports/baseball/mariano-rivera-3d.html" title="3d rivera" target="_blank">insane 3D-video</a> that analyzed his cutter, but apparently someone did that already, so we went with charts instead. I looked at saves over time of top pitchers while my colleague <a href="https://twitter.com/#!/giratikanon" title="Tom G." target="_blank">Tom Giratikanon</a>, who just started this week, compared Rivera across different categories.</p>
+<p>We had a broad idea for what we were going for, which Matt Ericson sketched out by hand:</p>
+<p><img align="middle" alt="matte drawing" src="http://farm8.staticflickr.com/7223/7000025406_fbc6bb579b_c.jpg" width="800"/></p>
+<p>I scraped the data for the players with the most saves from <a href="http://www.baseball-reference.com/leaders/SV_career.shtml" title="baseball reference" target="_blank">baseball-reference.com</a> (using an old template Shan Carter made using hpricot, which I learned is now &#8220;<a href="https://github.com/hpricot/hpricot" title="hpricot" target="_blank">over</a>&#8221;), then sketched the top 250 or so in R. This only takes a couple seconds to read about,  but it was in fact at least two hours of screws ups and swearing before I saw this chart:</p>
+<p><img align="middle" alt="first chart" src="http://farm8.staticflickr.com/7118/7146128845_183b362e9f_c.jpg" width="800"/></p>
+<p>Which eventually turned to this (we export odd colors to pick them up easily in Adobe Illustrator):</p>
+<p><img align="middle" alt="preprint" src="http://farm6.staticflickr.com/5350/7146128857_be454a781f_c.jpg" width="800"/></p>
+<p>And the final print version:</p>
+<p><img align="middle" alt="Final print" src="http://farm8.staticflickr.com/7086/7146128937_df9d71d06c_c.jpg" width="800"/></p>
+<p>Online, we took basically the same approach, except we wanted to make them interactive, so Shan Carter pitched in some D3 expertise and Tom made his in Raphael, and six painless hours later, after all the programming, browser checking, conditional loading (which might not be a term) and Matt Ericson VPNing in from New Jersey to fix everything, we had a nice interactive, mostly mobile-friendly graphic:</p>
+<p><a href="http://www.nytimes.com/interactive/2012/05/05/sports/baseball/mariano-rivera-and-his-peers.html?ref=baseball" title="How Rivera Compares" target="_blank"><img align="middle" alt="web" src="http://farm6.staticflickr.com/5332/7146151067_b60394c758_c.jpg" width="690"/></a></p>
+<p>Our approach wasn&#8217;t revolutionary or anything – in fact, Amanda and I used an identical charting form to <a href="http://www.nytimes.com/interactive/2010/07/29/sports/rodriguez-600.html" title="Home Runs" target="_blank">chart home runs</a> a couple years ago – but the package worked well, and if anything, Rivera stands out more in the saves chart than Barry Bonds does in the homers chart. And it was a promising start to the possibility of turning around this kind of work on deadline. </p>

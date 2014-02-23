@@ -1,0 +1,32 @@
+---
+layout: post
+title: Sketches from the Romney-Santorum ternary plot
+date: '2012-03-10T16:29:47-05:00'
+tags:
+- Before and After
+- data sketches
+tumblr_url: http://chartsnthings.tumblr.com/post/19078001617/sketches-from-the-romney-santorum-ternary-plot
+---
+<p>This week the graphics department published a couple graphics based on exit poll data. The <a href="http://www.nytimes.com/interactive/2012/03/07/us/politics/exit-polls-boxes.html" title="delightful" target="_blank">first one</a>, made mostly by Shan Carter, was similar in many respects to the one he made in 2008 to show the differences in voters supporting Barack Obama and Hillary Clinton. (Known internally as the &#8220;delightful dancing boxes.&#8221;)</p>
+<p>This view, which focused on Mitt Romney and Rick Santorum, was perfect for capturing the differences between their supporters, but we also wanted to show the influence of the other candidates, who have gotten <a href="http://elections.nytimes.com/2012/primaries/delegates" title="delegate count" target="_blank">substantial amounts </a>of delegates.</p>
+<p>Shan addressed this with a quick sketch:</p>
+<p><img align="middle" alt="shan sketch" src="http://farm8.staticflickr.com/7050/6824092110_0367387090_z.jpg" width="630"/></p>
+<p>Next they tried a <a href="http://en.wikipedia.org/wiki/Ternary_plot%20" title="ternary plot" target="_blank">ternary plot</a> (I had to look it up myself), which is apparently beloved in geology and frequently to describe soil samples. Anyway, I came on to the project late, after the concept had been more or less decided.</p>
+<p>First, a sketch showing how voters of a single demographic group supported in 7 different states. (Groups that supported Mitt Romney are farther to the right; groups for Santorum are farther to the left; groups supporting anyone else are toward the bottom.)</p>
+<p><img align="middle" alt="sketch1" src="http://farm8.staticflickr.com/7182/6824067726_e701635a93_b.jpg" width="800"/></p>
+<p>A different approach, and one we eventually went with, showed all the groups across a single state. This is for Iowa. </p>
+<p><img align="middle" alt="iowa" src="http://farm8.staticflickr.com/7182/6970189171_77d4551fa1_b.jpg" width="800"/></p>
+
+<p>Then we just tried to show this as best we could. One thought was to label the biggest groups and draw lines for the shift from another state. Here&#8217;s who Michigan voters supported, with the lines emphasizing the main groups&#8217; change from New Hampshire.</p>
+<p><img align="middle" alt="lines" src="http://farm8.staticflickr.com/7063/6970189109_288e982b95_b.jpg" width="800"/></p>
+
+<p>We really liked the lines in print, but once you animate the transitions you don&#8217;t really need them, since the motion has the same effect. (Plus I didn&#8217;t know how program the lines anyway.)</p>
+<p>Then we just had to build the thing, which we made using the <a href="http://mbostock.github.com/d3/" title="d3" target="_blank">D3 libraries</a>. In Flash this thing would have been not so hard, and it was slow going at the beginning. But we&#8217;re as good as anyone at copy/pasting from demos, so it wasn&#8217;t too long before this:</p>
+<p><img align="middle" alt="demo1" src="http://farm8.staticflickr.com/7176/6824067260_7d529931bf_b.jpg" width="935"/></p>
+
+<p>became this:</p>
+
+<p><a href="http://www.nytimes.com/interactive/2012/03/07/us/politics/how-candidates-fared-with-different-demographic-groups.html" title="final" target="_self"><img align="middle" alt="final" src="http://farm8.staticflickr.com/7190/6824067890_3480becf4d_b.jpg" width="800"/></a></p>
+
+<p>Fun!</p>
+<p>Also, we used <a href="http://bl.ocks.org/1405439" title="hit detection" target="_blank">this demo</a> for hit detection. To make your own ternary plots, install the <a href="http://cran.r-project.org/web/packages/vcd/index.html" title="vcd package" target="_blank">vcd package</a> in R. Here&#8217;s <a href="http://cran.r-project.org/web/packages/vcd/vcd.pdf" title="docs" target="_blank">the reference</a>. </p>
