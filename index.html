@@ -4,10 +4,26 @@ title: Chartsnthings
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
   <div class="main-posts">
-    {% for i in [0..2] %}
-    	<h4>{{i}}</h4>
+    {% for post in site.posts %}
+
+	{% if forloop.index < 10 %}
+	    <div class="post-container">
+				<p class="meta">{{ post.date | date_to_string }}</p>
+        <a href="{{site.baseurl}}{{ post.url }}">
+			    <h2 class="post-title" >{{ post.title }}</h3>
+			  </a>
+		    <div class="post">
+		    	{{ post.content }}
+		    </div> 
+		  </div>
+	{% endif %}
+
+
+		{% if forloop.index >=10 %}
+		<h6 class="older-posts"><a href="">{{post.title}}</a></h6>		
+		{% endif %}		
+
     {% endfor %}
 	</div>
 </div>

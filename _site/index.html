@@ -36,8 +36,841 @@
           </div>
 
           <div id="home">
-  <h1>Blog Posts</h1>
   <div class="main-posts">
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">15 Feb 2014</p>
+        <a href="//jekyll/update/2014/02/15/nyt-4th-down-bot-goes-back-in-the-box.html">
+			    <h2 class="post-title" >NYT 4th Down Bot Goes Back in the Box</h3>
+			  </a>
+		    <div class="post">
+		    	<p>I&#39;ve been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?</p>
+
+<p>For most of the fall, some colleagues and I developed <a href="http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/">NYT 4th Down Bot</a>, a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about the project for a while – ever since first reading David Romer’s <a href="http://elsa.berkeley.edu/%7Edromer/papers/JPE_April06.pdf">signature paper</a> on the subject a few years back – but the fall of 2013 was really the first time I felt like I was equipped to actually <em>make</em> even a crude demo. </p>
+
+<p>Earlier in the year, while working on a <a href="http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0">graphic about the draft</a>, I had spoken with Brian Burke, the creator of the popular football analytics web site <a href="http://www.advancednflstats.com/">Advanced NFL Stats</a>. I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he&#39;d be willing to create an API for his <a href="http://wp.advancednflstats.com/4thdncalc1.php">4th Down Calculator</a> for a joint venture once the season started. He said yes, and I told him I&#39;d be in touch in a few months.</p>
+
+<p>Without getting into the moving parts too much, because it&#39;s insanely boring, the app is quite complicated. We&#39;re watching a live data feed of every NFL game (provided by a Canadian company called <a href="http://www.sportsdirectinc.com/content/">SportsDirect</a>, processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke&#39;s 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute.</p>
+
+<p>My first sketches were simply small tables designed for a phone using data from the 2012 season. As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-1.jpg">
+<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-2.jpg">
+<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-3.jpg"></p>
+
+<p>I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian&#39;s model. (Originally, the tables simply compared &quot;Coach says&quot; to &quot;math says&quot;, which is a little less fun.) This first started with &quot;NYT Coachbot&quot;, a flat vector drawing from Jennifer.</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-4.jpg"></p>
+
+<p>We then started giving the robot a little bit more of a mouth. A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. </p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-5.jpg">
+<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-6.jpg">
+<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-7.jpg"></p>
+
+<p>The more we designed, the more we realized most people would be coming to the &quot;play&quot; pages, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/simple-sentence.png"></p>
+
+<p>By that point, the robot had become a real thing (even <a href="https://twitter.com/arnicas/status/410063538997039104">fooling our friend</a> Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/progression.jpg"></p>
+
+<!-- <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/12574160424_a5d03e3fd7_b.jpg"> -->
+
+<p>Here are some of Jennifer&#39;s thoughts on reactions he could have. (Shame about &quot;ashamed&quot; bot&#39;s lack of self-control.)</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/jd-concepts.png"></p>
+
+<p>In the end, we didn&#39;t make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do:</p>
+
+<div class="bot-grid">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/phone.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/angry.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/depressed.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/teatime.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/guac.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/reading-medium.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/respect.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/professor.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/thoughtful.png">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/touchdown.png">
+</div>
+
+<p>In less than 3 months, it had more than 10,000 Twitter followers, was shared on Twitter thousands of times, caught the interest of <a href="https://twitter.com/R_Thaler/status/430103904278167552">economists</a>, <a href="http://www.niemanlab.org/2013/12/yes-the-vikings-should-have-gone-for-it-on-4th-down-and-a-new-york-times-robot-knows-why/">journalists</a> and even the CEO of Twitter himself, <a href="https://twitter.com/dickc/status/430125767867891712">Dick Costolo</a>.</p>
+
+<p>It&#39;s certainly not perfect: it probably took too long to launch – we only started around Week 13 – and the lag between the end of the play and the analysis could feel more &quot;live.&quot; Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren&#39;t captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. And, as many statisticians have said, it could display uncertainty a little better than it does. </p>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">12 Oct 2013</p>
+        <a href="//2013/10/12/when-throw-works.html">
+			    <h2 class="post-title" >When “throw” works.</h3>
+			  </a>
+		    <div class="post">
+		    	<img src="/post-assets/2013-10-12-when-throw-works/throw.png">
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">29 Sep 2013</p>
+        <a href="//2013/09/29/19-sketches-of-quarterback-timelines.html">
+			    <h2 class="post-title" >19 Sketches of Quarterback Timelines</h3>
+			  </a>
+		    <div class="post">
+		    	<p>On Sunday Eli Manning started his 150th consecutive game for the Giants, the highest active streak in the NFL and the third-longest streak in NFL history. (One of the other two people above him is his brother, Peyton.)</p>
+<p>The graphics department published <a href="http://www.nytimes.com/newsgraphics/2013/09/28/eli-manning-milestone/?ref=sports" title="link">an interactive graphic</a> that put Eli&#8217;s streak in the context of about 2,000 streaks from about 500 pro quarterbacks. The graphic lets you explore the qbs and search for any quarterback or explore a team to go down memory lane for your team.</p>
+<p>It&#8217;s not particularly important news, but the data provided by pro-football-reference is incredibly detailed and the concept lended itself to a variety of sketches. It was also good practice sketching in D3, which, once you memorize a few things, isn&#8217;t as painful as I had thought. (Being in SF for the fall makes learning easier, too, since I can interrupt Mike more easily when he&#8217;s sitting one desk over. )</p>
+<p>A couple bar charts in R. First, total games started (this compares Eli to QBs in his draft class or later).</p>
+<p><img alt="image" src="http://farm3.staticflickr.com/2806/10008021916_88d8201883_c.jpg"/></p>
+<p>And percent of games started (the people are 100% are players like Andrew Luck or RGIII who just haven&#8217;t played a lot of seasons.)</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5504/10007979445_c01787c2bc_c.jpg"/></p>
+<p>Ported to a browser, just using total starts:</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5344/10007953384_488520ed49_c.jpg"/></p>
+<p>And share of total possible starts</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7405/10008083793_a541096946_c.jpg"/></p>
+<p>A different angle, showing teams with all the QBs who have started for them since 2004. (Sorry, Cleveland Browns.)</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5516/10007951554_f13659d788_c.jpg"/></p>
+<p>A similar idea, but mapping when each quarterback played for a particular team</p>
+<p><img alt="image" src="http://farm4.staticflickr.com/3751/10008463133_f91bc0d747_c.jpg"/></p>
+<p>Or just showing all the quarterbacks, regardless of team, going back to 2004&#8230;</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5512/10007951994_d34f7c8aed_c.jpg"/></p>
+<p>&#8230;or all the way back to 1970</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5330/10007980935_d925d840db_c.jpg"/></p>
+<p>Focuing on the teams took up less space, with a new color for each new QB. (Please wear sunglasses.)</p>
+<p><img alt="image" src="http://farm4.staticflickr.com/3742/10010309474_f90024b81a_b.jpg"/></p>
+<p>Simplifying the output, only labeling prominent quarterbacks:</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5534/10008025006_80057ba64d_c.jpg"/><img alt="image" src="http://farm4.staticflickr.com/3787/10010309264_445781c651_c.jpg"/><img alt="image" src="http://farm8.staticflickr.com/7334/10007955774_1fffaf4793_c.jpg"/></p>
+<p>At this point this was the general thought, but there were still some thougts on what the bars could look like. Lines were one option:</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5502/10007956444_6c38a114cc_c.jpg"/></p>
+<p>And then some more streak-like streaks, which eventually became more like arrows and less like, I don&#8217;t know, whatever you think <a href="http://www.nytimes.com/interactive/2013/09/25/sports/americas-cup-course.html">these</a> look like:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7292/10008086883_deb6f9063f_c.jpg"/><img alt="image" src="http://farm4.staticflickr.com/3777/10008028006_7c7b3ae05f_c.jpg"/><img alt="image" src="http://farm6.staticflickr.com/5536/10008087963_0d18cd2530_c.jpg"/><img alt="image" src="http://farm6.staticflickr.com/5448/10007957824_67e166a4ac_c.jpg"/><img alt="image" src="http://farm8.staticflickr.com/7388/10007986835_c489cb91de_c.jpg"/></p>
+<p>And the eventual one published Sunday, with search and fullscreen mode:</p>
+<p><img alt="image" src="http://farm4.staticflickr.com/3760/10008090203_64eb726910_c.jpg"/></p>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">23 Sep 2013</p>
+        <a href="//2013/09/23/i-accidentally-data-joined-mark-brunell-tonight.html">
+			    <h2 class="post-title" >I accidentally data-joined Mark Brunell tonight.</h3>
+			  </a>
+		    <div class="post">
+		    	<a href=""></a>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">11 Sep 2013</p>
+        <a href="//2013/09/11/another-version-of-this-bar-chart-of-cable-prices.html">
+			    <h2 class="post-title" >Another version of this bar chart of cable prices.</h3>
+			  </a>
+		    <div class="post">
+		    	<a href=""></a>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">11 Sep 2013</p>
+        <a href="//2013/09/11/if-bieber-programmed.html">
+			    <h2 class="post-title" >If Bieber programmed. </h3>
+			  </a>
+		    <div class="post">
+		    	<a href=""></a>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">26 Aug 2013</p>
+        <a href="//2013/08/26/some-small-news-shan-carter-and-i-will-be.html">
+			    <h2 class="post-title" >Some small news: Shan Carter and I will be teaching a class about data visualization this fall at UC-Berkeley. 
+The photo above is from Shan’s syllabus page, which should answer any questions you might have about what kind of teacher he’s going to be.</h3>
+			  </a>
+		    <div class="post">
+		    	<a href=""></a>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">22 Aug 2013</p>
+        <a href="//2013/08/22/grahams-online-class.html">
+			    <h2 class="post-title" >Graham's online class</h3>
+			  </a>
+		    <div class="post">
+		    	<p>My colleague Graham Roberts is teaching <a href="http://www.skillshare.com/classes/design/Animated-Information-Graphics-Using-Data-and-Motion-to-Reveal-the-Story/1100008111?via=profile" title="Skillshare">a SkillShare class about animated motion graphics</a>. It&#8217;s only $20. If you&#8217;re interested in this sort of thing, it&#8217;s probably worth not drinking those three beers and spending the money on Graham instead.  (I get nothing by posting this except his eternal gratitude, which means maybe next time we do a narrated video I&#8217;ll win the fight and he&#8217;ll cut all the background music.) </p>
+<p>These kind of storytelling skills are pretty hard to come by. If you have them, your portfolio looks like <a href="http://www.grahaphics.com/" title="Grahams portfolio" target="_blank">Graham&#8217;s</a>. If you don&#8217;t, you could be stuck making broken 2D Sankey diagrams like this one for the rest of your career:</p>
+<p><img alt="image" src="http://farm6.staticflickr.com/5510/9571497429_e75bf3e313_b.jpg"/></p>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+	    <div class="post-container">
+				<p class="meta">22 Jul 2013</p>
+        <a href="//2013/07/22/winning.html">
+			    <h2 class="post-title" >Winning</h3>
+			  </a>
+		    <div class="post">
+		    	<p>From a chat transcript with Amanda Cox this morning (with permission). <img alt="image" class="top-buffer" src="http://farm6.staticflickr.com/5339/9348291078_206b7a9866_b.jpg"/></p>
+<p>The spirit-lifting content she is describing is the print version of this <a href="http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html">interactive article</a>, for lack of a better word, about income mobility, mostly developed by Amanda and Shan Carter. Subway man&#8217;s fingers were tracing this chart: <img alt="image" src="http://farm6.staticflickr.com/5483/9348212504_4617e8f6d5_o.png"/></p>
+<p>It&#8217;s always hard watching print readers, most of whom are ruthless scanners, come across something you made; I&#8217;m glad it appears to have worked out. It goes without saying that &#8220;winning&#8221; Amanda is preferable to &#8220;spirits fell&#8221; Amanda by all parties everywhere.</p>
+
+		    </div> 
+		  </div>
+	
+
+
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href=""></a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Just happened</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href=""></a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Mike B. told me today that “charts n things needs more gifs.” As it happens I messed up some Hexbins just this afternoon.
+ </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href=""></a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Backwards gsub.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Bikes, Google Maps and Wisdom</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">When you ask someone from the Bay Area to mock up UI for the USA, this is what you get. (From today’s update of our bike wisdom map.) Sketch by Shan Carter, obv.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">When you suck at making maps, this is cause to celebrate.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches from Money on the Bench</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Made at 5:44, trashed at 5:45.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">NFL Draft Part II</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Charting Skill and Chance in the N.F.L. Draft </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">…
+Time for bed.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Nasty pitchers </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Climate Change,  Crowbars and Strikeouts </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Passive-agressive charting</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">It's been a while</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">New Yorkers in the N.B.A.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Interview for Source on 'Snow Fall'</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Modeling an avalanche</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Making a mountain out of a mountain of data</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">My colleague Jonathan Corum writes about drawing sign language in last week’s NYT. (Posing is Sergio Pecahna, another colleague.)</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">R tutorial: Simple charts</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Choosing the best form</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">I missed this, but you shouldn’t.
+
+grahaphics:
+
+An abstract flow created from motion capture of Nick McCrory’s high-dive, and destined for 3D printing with NYT R&D
+
+If you ever feel like curling up in the corner and having a good, long cry, Graham’s portfolio is here.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">A Chartsnthings Thanksgiving  </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Some sketches from the Times' scenario builder</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches from the Swinging Swing States</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches for How Obama Won Re-election</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">The scene from the nytgraphics conference room last night. Alicia Parlapiano (the real counterpart to @FakeParlaP), who was the brains of a good portion of the department’s analysis, made the schedule of what to watch for.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Election Update</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">NYT Graphics Wins 2012 Missouri Honor Medal</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Not weird at all</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Droughts on display </a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">All the passes - U.S. women's soccer</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Shifts in rankings</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">"Just for laughs" from Bob Costas</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Why Amanda Cox should be in charge of audio</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches from One Race, Every Medalist Ever</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">The Olympics Are Almost Over!</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Shan Carter's track</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Droughts on deadline</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Making mistakes outside the chart</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Amanda Cox and countrymen chart the Facebook I.P.O.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Shan Carter (and an army of others) share some sketches from the NYT electoral map</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches: How Mariano Rivera Compares to Baseball’s Best Closers</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches from White House State Dinners</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">White House Visits and Democratic Donors: Data Sketches and a Call for Votes</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Mapping Process: Rick Santorum's Race</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Sketches from the Romney-Santorum ternary plot</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: Analyzing ESPN "SportsCenter" Transcripts</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: Defense Puzzle Responses</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before, During and After: The Richest 1 Percent</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: The Path to 270</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: Indonesian Paper</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Brilliant</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: Senate Race Ratings</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Brutal.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: Super PACs and Campaign Finance</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Paid internships in data journalism</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Averages, distributions and the New York City Marathon</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Hello.</a></h6>		
+				
+
+    
+
+	
+
+
+		
+		<h6 class="older-posts"><a href="">Before and After: 2010 House Elections</a></h6>		
+				
+
     
 	</div>
 </div>

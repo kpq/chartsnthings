@@ -73,6 +73,12 @@ a:visited { color: #999; }
   margin-top:40px;
 }
 
+.post-container {
+  border-bottom:1px dashed #dedede;
+  padding-bottom:30px;
+  margin-bottom:30px;
+}
+
 /*****************************************************************************/
 /*
 /* Site
