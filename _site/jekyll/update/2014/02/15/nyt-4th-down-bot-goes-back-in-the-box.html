@@ -39,6 +39,37 @@
 <h2>NYT 4th Down Bot Goes Back in the Box</h2>
 
 <div class="post">
+<style type="text/css">
+.two-by {
+    margin-left: -50px;
+    width: 900px;
+}
+.two-by img {
+    width:49%;
+}
+
+.big {
+    margin-left: -175px;
+    max-width: 1050px;  
+}
+
+.big img {
+    width:1050px;
+}
+
+.bot-grid img {
+        height: 168px;
+margin-bottom: 10px;
+margin-right: 16px;
+}
+
+.bot-grid {
+    margin: 30px 0 30px -50px;
+    width:900px;
+
+}
+</style>
+
 <p>I&#39;ve been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?</p>
 
 <p>For most of the fall, some colleagues and I developed <a href="http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/">NYT 4th Down Bot</a>, a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about the project for a while – ever since first reading David Romer’s <a href="http://elsa.berkeley.edu/%7Edromer/papers/JPE_April06.pdf">signature paper</a> on the subject a few years back – but the fall of 2013 was really the first time I felt like I was equipped to actually <em>make</em> even a crude demo. </p>
@@ -47,37 +78,45 @@
 
 <p>Without getting into the moving parts too much, because it&#39;s insanely boring, the app is quite complicated. We&#39;re watching a live data feed of every NFL game (provided by a Canadian company called <a href="http://www.sportsdirectinc.com/content/">SportsDirect</a>, processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke&#39;s 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute.</p>
 
-<p>My first sketches were simply small tables designed for a phone using data from the 2012 season. As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.</p>
+<p>My first sketches were simply small tables designed for a phone using data from the 2012 season. </p>
 
-<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-1.jpg">
-<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-2.jpg">
-<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-3.jpg"></p>
+<div class="two-by">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-1.jpg">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-2.jpg">
+</div>
+
+<p>As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.</p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-3.jpg"></p>
 
 <p>I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian&#39;s model. (Originally, the tables simply compared &quot;Coach says&quot; to &quot;math says&quot;, which is a little less fun.) This first started with &quot;NYT Coachbot&quot;, a flat vector drawing from Jennifer.</p>
 
 <p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-4.jpg"></p>
 
-<p>We then started giving the robot a little bit more of a mouth. A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. </p>
+<p>We then started giving the robot a little bit more of a mouth. </p>
 
-<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-5.jpg">
-<img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-6.jpg">
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-5.jpg"></p>
+
+<p>A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. </p>
+
+<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-6.jpg">
 <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/table-7.jpg"></p>
 
-<p>The more we designed, the more we realized most people would be coming to the &quot;play&quot; pages, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.</p>
+<p>The more we designed, the more we realized most people would be coming to the &quot;play&quot; pages directly from Twitter, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.</p>
 
 <p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/simple-sentence.png"></p>
 
 <p>By that point, the robot had become a real thing (even <a href="https://twitter.com/arnicas/status/410063538997039104">fooling our friend</a> Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.</p>
 
-<p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/progression.jpg"></p>
+<div class="big">
+    <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/progression.jpg">
+</div>
 
-<!-- <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/12574160424_a5d03e3fd7_b.jpg"> -->
-
-<p>Here are some of Jennifer&#39;s thoughts on reactions he could have. (Shame about &quot;ashamed&quot; bot&#39;s lack of self-control.)</p>
+<p>Here are some of Jennifer&#39;s thoughts on reactions he could have. (Bummer about &quot;ashamed&quot; bot&#39;s lack of self-control.)</p>
 
 <p><img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/jd-concepts.png"></p>
 
-<p>In the end, we didn&#39;t make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do:</p>
+<p>In the end, we didn&#39;t make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including dogging you for making nachos):</p>
 
 <div class="bot-grid">
     <img src="/post-assets/2014-02-15-nyt-4th-down-bot-goes-back-in-the-box/phone.png">

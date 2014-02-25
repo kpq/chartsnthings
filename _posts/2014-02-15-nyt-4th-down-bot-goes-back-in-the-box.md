@@ -5,6 +5,37 @@ date:   2014-02-15 17:01:51
 categories: jekyll update
 ---
 
+<style type="text/css">
+.two-by {
+	margin-left: -50px;
+	width: 900px;
+}
+.two-by img {
+	width:49%;
+}
+
+.big {
+	margin-left: -175px;
+	max-width: 1050px;	
+}
+
+.big img {
+	width:1050px;
+}
+
+.bot-grid img {
+		height: 168px;
+margin-bottom: 10px;
+margin-right: 16px;
+}
+
+.bot-grid {
+	margin: 30px 0 30px -50px;
+	width:900px;
+
+}
+</style>
+
 I've been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?
 
 For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about the project for a while – ever since first reading David Romer’s [signature paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) on the subject a few years back – but the fall of 2013 was really the first time I felt like I was equipped to actually <em>make</em> even a crude demo. 
@@ -13,37 +44,45 @@ Earlier in the year, while working on a [graphic about the draft](http://www.nyt
 
 Without getting into the moving parts too much, because it's insanely boring, the app is quite complicated. We're watching a live data feed of every NFL game (provided by a Canadian company called [SportsDirect](http://www.sportsdirectinc.com/content/), processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke's 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute.
 
-My first sketches were simply small tables designed for a phone using data from the 2012 season. As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.
+My first sketches were simply small tables designed for a phone using data from the 2012 season. 
 
-<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
-<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+<div class="two-by">
+	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
+	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+</div>
+
+As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.
+
 <img src="{{site.baseurl | asset_path: page.id}}/table-3.jpg">
 
 I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is a little less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
 <img src="{{site.baseurl | asset_path: page.id}}/table-4.jpg">
 
-We then started giving the robot a little bit more of a mouth. A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. 
+We then started giving the robot a little bit more of a mouth. 
 
 <img src="{{site.baseurl | asset_path: page.id}}/table-5.jpg">
+
+A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. 
+
 <img src="{{site.baseurl | asset_path: page.id}}/table-6.jpg">
 <img src="{{site.baseurl | asset_path: page.id}}/table-7.jpg">
 
-The more we designed, the more we realized most people would be coming to the "play" pages, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.
+The more we designed, the more we realized most people would be coming to the "play" pages directly from Twitter, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.
 
 <img src="{{site.baseurl | asset_path: page.id}}/simple-sentence.png">
 
 By that point, the robot had become a real thing (even [fooling our friend](https://twitter.com/arnicas/status/410063538997039104) Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.
 
-<img src="{{site.baseurl | asset_path: page.id}}/progression.jpg">
+<div class="big">
+	<img src="{{site.baseurl | asset_path: page.id}}/progression.jpg">
+</div>
 
-<!-- <img src="{{site.baseurl | asset_path: page.id}}/12574160424_a5d03e3fd7_b.jpg"> -->
-
-Here are some of Jennifer's thoughts on reactions he could have. (Shame about "ashamed" bot's lack of self-control.)
+Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "ashamed" bot's lack of self-control.)
 
 <img src="{{site.baseurl | asset_path: page.id}}/jd-concepts.png">
 
-In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do:
+In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including dogging you for making nachos):
 
 <div class="bot-grid">
 	<img src="{{site.baseurl | asset_path: page.id}}/phone.png">

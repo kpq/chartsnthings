@@ -1,3 +1,4 @@
 name: chartsnthings
 markdown: redcarpet
 pygments: true
+baseurl: kpq.github.io/chartsnthings
