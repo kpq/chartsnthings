@@ -23,21 +23,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 p { 
-font-family: 'Noticia Text', serif;
-  line-height:1.3em;
-  font-weight:300;
-  font-size: 17px;
-  margin: 1em 0; 
-}
-
-h1 {
-/*  margin-bottom:30px;
-  padding-bottom:40px;
-  border-bottom: 1px dashed #dedede;
-  text-align: center;
-  margin-top: 80px;*/
-
-
+  font-family: 'Noticia Text', serif;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 1em 0;
 }
 
 h2 {
@@ -45,8 +35,12 @@ h2 {
   font-family: "Noticia Text";
 }
 
-a         { color: #000; }
-a:hover   { color: chartreuse; }
+.post-title a:visited {
+  color:black;
+}
+
+a         { text-decoration: none;color: #000; }
+a:hover   { text-decoration: underline; }
 a:visited { color: #999; }
 
 /*****************************************************************************/
@@ -159,6 +153,26 @@ letter-spacing: 0px;
   border: 0;
 }
 
+.older-date {
+  padding-right:30px;
+  width:100px;
+}
+
+.older-list-item {
+
+}
+
+table {
+  border-collapse: collapse;
+}
+td {
+  padding:10px 0;
+  border-bottom:1px dashed #dedede;
+}
+
+.older-link {
+}
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -199,6 +213,7 @@ letter-spacing: 0px;
 
 .post p img {
   max-width:100%;
+  margin:20px 0;
 }
 
 .post img.small {

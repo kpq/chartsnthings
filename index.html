@@ -10,20 +10,38 @@ title: Chartsnthings
 	{% if forloop.index < 10 %}
 	    <div class="post-container">
 				<p class="meta">{{ post.date | date_to_string }}</p>
-        <a href="{{site.baseurl}}{{ post.url }}">
-			    <h2 class="post-title" >{{ post.title }}</h3>
-			  </a>
-		    <div class="post">
-		    	{{ post.content }}
-		    </div> 
+		
+				{% if post.layout == "post" %}
+			  	<h2 class="post-title" >
+						<a href="{{ post.url }}">{{ post.title }}</a>
+				  </h2>
+			    <div class="post">
+			    	{{ post.content }}
+			    </div>
+				{% endif %}
+
+				{% if post.layout == "simple" %}
+			    <div class="post">
+			    	{{ post.content }}
+			    </div>
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}		    
+
 		  </div>
-	{% endif %}
-
-
-		{% if forloop.index >=10 %}
-		<h6 class="older-posts"><a href="">{{post.title}}</a></h6>		
-		{% endif %}		
-
-    {% endfor %}
+		{% endif %}
+  {% endfor %}
+	
 	</div>
+
+  <h6>Older posts</h6>
+  <table class="older-posts">
+	  {% for post in site.posts %}
+			{% if forloop.index >=10 %}
+				<tr class="older-list-item">
+					<td class="older-date">{{ post.date | date_to_string }}</td>
+					<td class="older-link" href="{{ post.url }}"><a href="{{post.url}}">{{post.title}}</a></td>
+				</tr>		
+			{% endif %}
+	  {% endfor %}
+	</table>
 </div>
