@@ -13,7 +13,7 @@ title: Chartsnthings
 		
 				{% if post.layout == "post" %}
 			  	<h2 class="post-title" >
-						<a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+						<a href="{{ post.url }}">{{ post.title }}</a>
 				  </h2>
 			    <div class="post">
 			    	{{ post.content }}
@@ -39,7 +39,7 @@ title: Chartsnthings
 			{% if forloop.index >=10 %}
 				<tr class="older-list-item">
 					<td class="older-date">{{ post.date | date_to_string }}</td>
-					<td class="older-link" href="{{ site.baseurl }}/{{ post.url }}"><a href="{{post.url}}">{{post.title}}</a></td>
+					<td class="older-link" href="{{ post.url }}"><a href="{{post.url}}">{{post.title}}</a></td>
 				</tr>		
 			{% endif %}
 	  {% endfor %}
