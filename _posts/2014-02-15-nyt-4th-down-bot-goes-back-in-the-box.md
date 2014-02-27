@@ -57,29 +57,24 @@ For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://
 
 Earlier in the year, while working on a [graphic about the draft](http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0), I had spoken with Brian Burke, the creator of the popular football analytics web site [Advanced NFL Stats](http://www.advancednflstats.com/). I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he'd be willing to create an API for his [4th Down Calculator](http://wp.advancednflstats.com/4thdncalc1.php) for a joint venture once the season started. He said yes, and I told him I'd be in touch in a few months.
 
-Without getting into the moving parts too much, because it's insanely boring, the app is quite complicated. We're watching a live data feed of every NFL game (provided by a Canadian company called [SportsDirect](http://www.sportsdirectinc.com/content/), processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke's 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute.
+Without getting into the moving parts too much, because it's insanely boring, the app is quite complicated. We're watching a live data feed of every NFL game (provided by a Canadian company called [SportsDirect](http://www.sportsdirectinc.com/content/), processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke's 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute. (Before Tom Giratikanon got involved, it took a lot longer than that – without him, the app would still be sitting on my Desktop.)
 
 My first sketches were simply small tables designed for a phone using data from the 2012 season. 
 
 <div class="two-by">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
-	<img src="{{ site.baseurl }}{{ post.url }}/table-2.jpg">
-
-	<h5>Page id: {{page.id}}</h5>
-	<h5>Post url: {{post.url}}</h5>
-	<h5>Base url: {{site.baseurl}}</h5>
 </div>
 
-As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.
+As the concept became clearer, the tables became bigger, more interesting, and much more opinionated.
 
 <img src="{{site.baseurl | asset_path: page.id}}/table-3.jpg">
 
-I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is a little less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
+I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
 <img src="{{site.baseurl | asset_path: page.id}}/table-4.jpg">
 
-We then started giving the robot a little bit more of a mouth. 
+We then started giving the robot more of a mouth. 
 
 <img src="{{site.baseurl | asset_path: page.id}}/table-5.jpg">
 
@@ -97,6 +92,11 @@ By that point, the robot had become a real thing (even [fooling our friend](http
 <div class="big">
 	<img src="{{site.baseurl | asset_path: page.id}}/progression.jpg">
 </div>
+
+And what that looks like in Modo, the 3D program Shan used to render it.
+
+<img src="{{site.baseurl | asset_path: page.id}}/image.png">
+
 
 Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "ashamed" bot's lack of self-control.)
 
@@ -117,10 +117,35 @@ In the end, we didn't make all those poses, but we did do a lot of fun ones that
 	<img src="{{site.baseurl | asset_path: page.id}}/touchdown.png">
 </div>
 
-In less than 3 months, it had more than 10,000 Twitter followers, was shared on Twitter thousands of times, caught the interest of [economists](https://twitter.com/R_Thaler/status/430103904278167552), [journalists](http://www.niemanlab.org/2013/12/yes-the-vikings-should-have-gone-for-it-on-4th-down-and-a-new-york-times-robot-knows-why/) and even the CEO of Twitter himself, [Dick Costolo](https://twitter.com/dickc/status/430125767867891712).
+By the end of the season, it had more than 10,000 Twitter followers – in the process, winning two bets with Marc Lavalee (original bet was 5,000 followers and then a double-or-nothing), who is now obligated to buy a beer for "every man, woman and child" in the NYT newsroom.
 
-It's certainly not perfect: it probably took too long to launch – we only started around Week 13 – and the lag between the end of the play and the analysis could feel more "live." Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren't captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. And, as many statisticians have said, it could display uncertainty a little better than it does. 
+Still, it's certainly not perfect. Here are some things that are wrong with it:
 
+- It probably took too long to launch. We published around Week 13. Officially we missed our goal by only five days, but in retrospect we could have published something less polished and improved it as it gained momentum. (This is hard for us newspaper people to do.)
+
+- It could feel more “live”. The lag between the end of the play and the analysis takes about a minute, but sometimes the delay on the play-by-play data lagged a bit, which meant you were getting bot analysis well after the other team started its drive. This isn't ideal, but there just isn't much we could do about it. 
+
+- Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren't captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. This particularly annoyed Aaron Schatz of Football Outsiders, who had no problem looking a gift bot in the mouth.
+
+- As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year. 
+
+Here's a list of notable 4th Down bot links for the offseason:
+
+- [An intro post](http://www.advancednflstats.com/2013/12/new-feature-nyt-4th-down-bot.html) from Brian Burke when it was launched. "Even <em>I'm</em> tired of analyzing 4th downs."
+
+- A [thoughtful critique](http://statsbylopez.wordpress.com/2013/12/04/my-quick-thoughts-on-the-4th-down-bot/) from a statistician's perspective.
+
+- I talked about it on the [Advanced NFL Stats](http://www.advancednflstats.com/2014/01/podcast-episode-17-kevin-quealy.html) podcast.
+
+- Neiman Lab [wrote a feature](http://www.niemanlab.org/2013/12/yes-the-vikings-should-have-gone-for-it-on-4th-down-and-a-new-york-times-robot-knows-why/) on it.
+
+- Gigaom wrote [a long post](http://gigaom.com/2013/12/06/awesome-a-new-york-times-bot-is-second-guessing-nfl-coaches-on-twitter/) about it and then did [a longer feature](http://gigaom.com/2014/02/02/meet-the-fighter-pilot-trying-to-crack-the-code-of-nfl-data/) on [Brian Burke](https://twitter.com/Adv_NFL_Stats), who developed the statistical model that drives the bot.
+
+- For some reason, it had something to do with [brands and content strategy](http://contently.com/strategist/2013/12/11/i-never-thought-the-machines-would-take-over-but-then-i-met-the-ny-times-4th-down-bot/), though to be honest, this article makes little sense.
+
+- Nate Silver devoted three paragraphs of his [ESPN magazine cover story](http://espn.go.com/espn/story/_/id/10476210/nba-mlb-embrace-analytics-nfl-reluctant-espn-magazine) on the bot.
+
+Still, although I'm biased, I think it ended up being pretty cool and I enjoyed being a part of it. Hopefully we introduce a cousin or two this summer, too. If not, preseason is only 6 months away.
 
 
 
