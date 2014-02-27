@@ -48,6 +48,9 @@ My first sketches were simply small tables designed for a phone using data from 
 <div class="two-by">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+	<h5>Page id: {{page.id}}</h5>
+	<h5>Post url: {{post.url}}</h5>
+	<h5>Base url: {{site.baseurl}}</h5>
 </div>
 
 As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.

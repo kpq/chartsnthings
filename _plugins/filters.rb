@@ -19,14 +19,9 @@ module Jekyll
 
     def asset_path(site, post_id)
 
-      # post_id
+      new_id = post_id.gsub("/", "-")[1..-1] 
 
-      new_id = post_id.gsub("jekyll/update/", "")
-
-      site + "post-assets/" + new_id.gsub("/", "-")[1..-1]
-
-      # jekyll/update/2014/02/15/nyt-4th-down-bot-goes-back-in-the-box
-    # post_id.gsub("jekyll/update/", "").gsub("/", "-")[1..-1]
+      "post-assets/" + new_id
     end
 
   end
