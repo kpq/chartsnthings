@@ -2,7 +2,6 @@
 layout: post
 title:  "NYT 4th Down Bot Goes Back in the Box"
 date:   2014-02-15 17:01:51
-categories: jekyll update
 ---
 
 <style type="text/css">
