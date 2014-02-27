@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Droughts on deadline</title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+    <div class="mini-banner"></div>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">21 Jul 2012</p>
+<h2>Droughts on deadline</h2>
+
+<div class="post">
+<p>Last week I got a chance to drop various longer-term assignments and do a small amount of monkeying for my colleague <a href="http://haeyoun" title="Haeyoun twitter" target="_blank">Haeyoun Park</a>, who had obtained some data  from the <a href="http://www.cpc.ncep.noaa.gov/products/Drought/" title="NOAA drought" target="_blank">N.O.A.A.</a> on droughts in the contiguous United States going back more than a hundred years. </p>
+<p>Every project is different, and when you&#8217;re on deadline, everyone just pitches in however they can to get the thing done in time. Haeyoun already knew exactly what she wanted: a grid of small multiples, showing one map per year. She had already done the reporting, gotten the data, made a map or two with GIS software to confirm that the idea would work. She just needed someone to crank out the maps. (Which is to say, she did almost all the work.) </p>
+<p>As far as the computation goes, these maps are extremely easy to make using <a href="http://cran.r-project.org/web/packages/maptools/index.html" title="maptools" target="_blank">maptools</a>. Generally, it takes about 20 minutes to make the first map and about 10 seconds to make the next N maps. (Not that I didn&#8217;t need to ask Amanda to fix my code.) These were all written to a single PDF in the grid Haeyoun wanted (here, an area is shaded red if it is under moderate to extreme drought):</p>
+<p><img align="middle" alt="PDF export" src="http://farm9.staticflickr.com/8429/7618592314_c09df27a8f_b.jpg" width="757"/></p>
+<p>Which she annotated and cleaned up for print:</p>
+<p><img align="middle" alt="Print version" src="http://farm9.staticflickr.com/8147/7618591830_d6e2fb8047_b.jpg" width="770"/></p>
+<p>Archie Tse wanted to explore a couple different grid patterns for the web, since we had a little more space to deal with, and he had me export a few different sizes&#8230;</p>
+<p><img align="middle" alt="grid of grids" src="http://farm9.staticflickr.com/8148/7618591266_7da07a43d9_o.jpg" width="770"/></p>
+<p>&#8230;before deciding on the 10-by grid, which is cool because you see an entire decade in every row. (This had not occurred to me until I saw it on the page.) They reordered them to go back in time, with 2012 on top:</p>
+<p><a href="http://www.nytimes.com/interactive/2012/07/20/us/drought-footprint.html" title="Drought's footprint" target="_blank"><img align="middle" alt="web version" src="http://farm9.staticflickr.com/8431/7618591490_64a8336d2a_b.jpg" width="790"/></a></p>
+
+</div>
+
+
+          <div class="footer">
+          </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sketches from Money on the Bench</title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+    <div class="mini-banner"></div>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">15 May 2013</p>
+<h2>Sketches from Money on the Bench</h2>
+
+<div class="post">
+<p>On Monday we published something a little different than most of the graphics we make – a <a href="http://www.nytimes.com/interactive/2013/05/13/sports/baseball/money-on-the-bench.html?smid=tw-nytimes" title="Money on the Bench">running, updating tracker</a> of how much money major league teams are paying to players on the disabled list.</p>
+<p>I love sports, but I&#8217;m not a huge baseball fan and I&#8217;m neutral on the Yankees scale – I don&#8217;t really hate them but I can&#8217;t say I care whether they win or lose. But early in the year, I remember seeing a fun New Yorker cover that planted a seed:</p>
+<p><img alt="image" src="http://www.newyorker.com/online/blogs/culture/130408_2013_p465.jpg"/></p>
+<p>Talking to some friends and colleagues, Joe Ward and I thought it would be fun to do something that put a dollar figure on the Yankees&#8217; disabled list. We certainly weren&#8217;t the first people to notice this – in addition to coverage from traditional outlets, the Onion <a href="http://www.theonion.com/articles/yankees-disabled-list-absolutely-stacked,32100/" title="onion">wrote about</a> how &#8220;stacked&#8221; the D.L. was and there was a well-circulated <a href="http://itsaboutthemoney.net/archives/2013/05/01/update-yankees-dld-payroll-nearing-100m/" title="bloggy">blog post</a> when their payroll approached $100 million in annual salaries – but we wanted to make something that showed all major league teams and was updated throughout the season. To do that, you only need two data sources: <a href="http://www.baseballprospectus.com/compensation/" title="sal;aries">salaries for every player</a> in the league and <a href="http://mlb.mlb.com/mlb/transactions/#month=5&amp;year=2013" title="transactions">a list</a> of all major league transactions, both of which are updated regularly.</p>
+<p><span>We wanted users to be able to find their own team, but also to see the big picture. Some of our original sketches focused on the amount spent per team per day. Below, a chart where each line represents one team&#8217;s amount paid to players per day (the jumps and dips represent players coming on and off the list):</span></p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7283/8741388365_3678ddca6b_c.jpg"/></p>
+<p>Another sketch showed the teams as small multiples:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7288/8741388237_ce4c57de55_b.jpg"/></p>
+<p>And another used stacked bars (poorly):</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7288/8741388423_4f1fbe8be0_b.jpg"/></p>
+<p>Or one that just showed the players on the bench and how long they&#8217;d been on it, regardless of team or salary:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7292/8742503812_cfa859b504_b.jpg"/></p>
+<p>But the one that stuck out the most in the end was the simplest – an aggregate per-team calculation:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7284/8741388157_8a6c25abcc_b.jpg"/></p>
+<p>With that, we started developing things in the browser. The following are sketches made with D3 based on the previous R charts.</p>
+<p>Originally, this started as an idea for a phone with just a couple numbers per team. (These sketches are old and the numbers are calculated incorrectly&#8230; I screwed some things up.)</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7282/8741388781_24c2996f0e_o.jpg"/></p>
+<p><span>But we also wanted to see individual players. Here, a first attempt at the data join in D3:</span></p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7290/8741388665_1c450ab105_b.jpg"/></p>
+<p>Later, hooking it up to real salary data:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7294/8742504362_4ff85264a9_c.jpg"/></p>
+<p>And making it a little less boring (or &#8220;adding sugar,&#8221; as Shan says)</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7294/8741388553_baf90e5200_c.jpg"/></p>
+<p>Before coming to the version that&#8217;s online now:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7290/8743373910_4fa8d35731_b.jpg"/></p>
+<p>We still kept a mobile view that I think turned out as well or better than the desktop version:</p>
+<p><img alt="image" src="http://farm8.staticflickr.com/7281/8742411243_ddfcb3dabd_o.png"/></p>
+<p>Is this an earth-shattering example of data journalism? I suppose it is not. It&#8217;s two data sets, a timer and and a giant photograph of A-Rod updated a couple times a day. But I must say I like it. It&#8217;s fun and engaging for the users it&#8217;s aimed at; it&#8217;s not tied to a single news event but it&#8217;s not aimless either; it was developed and published in less than two weeks; it works on all sorts of devices and it updates every day (originally an R script running on a crontab, now a node script). It&#8217;s also a good example of using D3 to make data-driven applications without using SVG at all.</p>
+<p>Normally I show what we did in print, but in this case, we didn&#8217;t make anything. Most of the fun of this is seeing the numbers tick up in front of you (Shan&#8217;s idea) as you&#8217;re on the page. In print, it&#8217;s just another bar chart. At the same time, if something happens, we&#8217;ll be ready on short notice with all the data we need.  </p>
+
+</div>
+
+
+          <div class="footer">
+          </div>
+        </div>
+
+    </body>
+</html>

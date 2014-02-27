@@ -2,3 +2,4 @@ name: chartsnthings
 markdown: redcarpet
 pygments: true
 baseurl: /chartsnthings
+permalink: /:year/:month/:title.html

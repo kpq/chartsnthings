@@ -31,8 +31,24 @@ margin-right: 16px;
 .bot-grid {
 	margin: 30px 0 30px -50px;
 	width:900px;
+	display: inline-block;
+}
+
+@media all and (max-width: 768px) {
+
+	.bot-grid img {
+		float:left;
+	}
+	.bot-grid {
+		width:100%;
+	}
 
 }
+
+
+
+
+
 </style>
 
 I've been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?
@@ -48,6 +64,8 @@ My first sketches were simply small tables designed for a phone using data from 
 <div class="two-by">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+	<img src="{{ site.baseurl }}{{ post.url }}/table-2.jpg">
+
 	<h5>Page id: {{page.id}}</h5>
 	<h5>Post url: {{post.url}}</h5>
 	<h5>Base url: {{site.baseurl}}</h5>

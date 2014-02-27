@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>NYT 4th Down Bot Goes Back in the Box</title>
+        <meta name="viewport" content="width=device-width">
+
+<!--   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200' rel='stylesheet' type='text/css'> -->
+
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
+
+
+
+        <!-- syntax highlighting CSS -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+    <div class="mini-banner"></div>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">chartsnthings</a></h1>
+          </div>
+
+          <p class="meta">15 Feb 2014</p>
+<h2>NYT 4th Down Bot Goes Back in the Box</h2>
+
+<div class="post">
+<style type="text/css">
+.two-by {
+    margin-left: -50px;
+    width: 900px;
+}
+.two-by img {
+    width:49%;
+}
+
+.big {
+    margin-left: -175px;
+    max-width: 1050px;  
+}
+
+.big img {
+    width:1050px;
+}
+
+.bot-grid img {
+        height: 168px;
+margin-bottom: 10px;
+margin-right: 16px;
+}
+
+.bot-grid {
+    margin: 30px 0 30px -50px;
+    width:900px;
+    display: inline-block;
+}
+
+@media all and (max-width: 768px) {
+
+    .bot-grid img {
+        float:left;
+    }
+    .bot-grid {
+        width:100%;
+    }
+
+}
+
+
+
+
+
+</style>
+
+<p>I&#39;ve been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?</p>
+
+<p>For most of the fall, some colleagues and I developed <a href="http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/">NYT 4th Down Bot</a>, a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about the project for a while – ever since first reading David Romer’s <a href="http://elsa.berkeley.edu/%7Edromer/papers/JPE_April06.pdf">signature paper</a> on the subject a few years back – but the fall of 2013 was really the first time I felt like I was equipped to actually <em>make</em> even a crude demo. </p>
+
+<p>Earlier in the year, while working on a <a href="http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0">graphic about the draft</a>, I had spoken with Brian Burke, the creator of the popular football analytics web site <a href="http://www.advancednflstats.com/">Advanced NFL Stats</a>. I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he&#39;d be willing to create an API for his <a href="http://wp.advancednflstats.com/4thdncalc1.php">4th Down Calculator</a> for a joint venture once the season started. He said yes, and I told him I&#39;d be in touch in a few months.</p>
+
+<p>Without getting into the moving parts too much, because it&#39;s insanely boring, the app is quite complicated. We&#39;re watching a live data feed of every NFL game (provided by a Canadian company called <a href="http://www.sportsdirectinc.com/content/">SportsDirect</a>, processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke&#39;s 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute.</p>
+
+<p>My first sketches were simply small tables designed for a phone using data from the 2012 season. </p>
+
+<div class="two-by">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-1.jpg">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-2.jpg">
+    <img src="/table-2.jpg">
+
+    <h5>Page id: /2014/02/nyt-4th-down-bot-goes-back-in-the-box</h5>
+    <h5>Post url: </h5>
+    <h5>Base url: </h5>
+</div>
+
+<p>As the concept became clearer, the tables became bigger, a little more interesting, and much more opinionated.</p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-3.jpg"></p>
+
+<p>I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian&#39;s model. (Originally, the tables simply compared &quot;Coach says&quot; to &quot;math says&quot;, which is a little less fun.) This first started with &quot;NYT Coachbot&quot;, a flat vector drawing from Jennifer.</p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-4.jpg"></p>
+
+<p>We then started giving the robot a little bit more of a mouth. </p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-5.jpg"></p>
+
+<p>A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. </p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-6.jpg">
+<img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/table-7.jpg"></p>
+
+<p>The more we designed, the more we realized most people would be coming to the &quot;play&quot; pages directly from Twitter, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.</p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/simple-sentence.png"></p>
+
+<p>By that point, the robot had become a real thing (even <a href="https://twitter.com/arnicas/status/410063538997039104">fooling our friend</a> Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.</p>
+
+<div class="big">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/progression.jpg">
+</div>
+
+<p>Here are some of Jennifer&#39;s thoughts on reactions he could have. (Bummer about &quot;ashamed&quot; bot&#39;s lack of self-control.)</p>
+
+<p><img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/jd-concepts.png"></p>
+
+<p>In the end, we didn&#39;t make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including dogging you for making nachos):</p>
+
+<div class="bot-grid">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/phone.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/angry.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/depressed.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/teatime.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/guac.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/reading-medium.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/respect.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/professor.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/thoughtful.png">
+    <img src="post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box/touchdown.png">
+</div>
+
+<p>In less than 3 months, it had more than 10,000 Twitter followers, was shared on Twitter thousands of times, caught the interest of <a href="https://twitter.com/R_Thaler/status/430103904278167552">economists</a>, <a href="http://www.niemanlab.org/2013/12/yes-the-vikings-should-have-gone-for-it-on-4th-down-and-a-new-york-times-robot-knows-why/">journalists</a> and even the CEO of Twitter himself, <a href="https://twitter.com/dickc/status/430125767867891712">Dick Costolo</a>.</p>
+
+<p>It&#39;s certainly not perfect: it probably took too long to launch – we only started around Week 13 – and the lag between the end of the play and the analysis could feel more &quot;live.&quot; Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren&#39;t captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. And, as many statisticians have said, it could display uncertainty a little better than it does. </p>
+
+</div>
+
+
+          <div class="footer">
+          </div>
+        </div>
+
+    </body>
+</html>
