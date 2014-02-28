@@ -42,6 +42,13 @@ margin-right: 16px;
 	.bot-grid {
 		width:100%;
 	}
+	.two-by {
+		width:100%;
+	}
+
+	.two-by img {
+		width:100%;
+	}
 
 }
 
