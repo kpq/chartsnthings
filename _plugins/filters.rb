@@ -16,13 +16,14 @@ module Jekyll
 
       # site + "/post-assets/" + [1..-1]
 
+      def asset_path(site, post_id)
 
-    def asset_path(site, post_id)
+        site + "/post-assets/" + post_id.gsub("/","-")[1..-1]
 
-      new_id = post_id.gsub("/", "-")[1..-1] 
 
-      "post-assets/" + new_id
-    end
+      end
+
+
 
   end
 
