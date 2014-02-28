@@ -35,13 +35,17 @@ h2 {
   font-family: "Noticia Text";
 }
 
+h2 a {
+  text-decoration: none;
+}
+
 .post-title a:visited {
   color:black;
 }
 
-a         { text-decoration: none;color: #000; }
+a         { text-decoration: underline; color: #000; }
 a:hover   { text-decoration: underline; }
-a:visited { color: #999; }
+a:visited { color: #333; }
 
 /*****************************************************************************/
 /*

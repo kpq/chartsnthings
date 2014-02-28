@@ -102,7 +102,7 @@ Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "
 
 <img src="{{site.baseurl | asset_path: page.id}}/jd-concepts.png">
 
-In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including dogging you for making nachos):
+In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including [dogging you](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/guacamole.html) for making nachos):
 
 <div class="bot-grid">
 	<img src="{{site.baseurl | asset_path: page.id}}/phone.png">
@@ -125,7 +125,7 @@ Still, it's certainly not perfect. Here are some things that are wrong with it:
 
 - It could feel more “live”. The lag between the end of the play and the analysis takes about a minute, but sometimes the delay on the play-by-play data lagged a bit, which meant you were getting bot analysis well after the other team started its drive. This isn't ideal, but there just isn't much we could do about it. 
 
-- Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren't captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. This particularly annoyed Aaron Schatz of Football Outsiders, who had no problem looking a gift bot in the mouth.
+- Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren't captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. This [particularly annoyed](https://twitter.com/FO_ASchatz/status/422195580639936512) Aaron Schatz of Football Outsiders, who called the bot .
 
 - As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year. 
 

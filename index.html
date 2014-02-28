@@ -10,7 +10,7 @@ title: chartsnthings
 
 	{% if forloop.index < 10 %}
 	    <div class="post-container">
-				<p class="meta">{{ post.date | date_to_string }}</p>
+				<p class="meta">{{ post.date | date: '%B %d, %Y' }}</p>
 		
 				{% if post.layout == "post" %}
 			  	<h2 class="post-title" >
