@@ -2,7 +2,7 @@
 layout: post
 title:  "NYT 4th Down Bot"
 date:   2014-02-15 17:01:51
-slug: post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box
+slug: /post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box
 ---
 
 <style type="text/css">
@@ -70,7 +70,7 @@ Without getting into the moving parts too much, because it's insanely boring, th
 My first sketches were simply small tables designed for a phone using data from the 2012 season. 
 
 <div class="two-by">
-	<img src="/{{site.baseurl}}{{page.slug}}/table-1.jpg">
+	<img src="{{page.slug}}/table-1.jpg">
 	<img src="/{{site.baseurl}}{{page.slug}}/table-2.jpg">
 </div>
 
