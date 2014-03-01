@@ -70,7 +70,11 @@ Without getting into the moving parts too much, because it's insanely boring, th
 My first sketches were simply small tables designed for a phone using data from the 2012 season. 
 
 <div class="two-by">
-	<img src="{{page.slug}}/table-1.jpg">
+
+	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
+
+
+	<img src="/{{site.baseurl}}{{page.slug}}/table-1.jpg">
 	<img src="/{{site.baseurl}}{{page.slug}}/table-2.jpg">
 </div>
 
