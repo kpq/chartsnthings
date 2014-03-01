@@ -2,6 +2,7 @@
 layout: post
 title:  "NYT 4th Down Bot Goes Back in the Box"
 date:   2014-02-15 17:01:51
+slug: post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box
 ---
 
 <style type="text/css">
@@ -71,11 +72,13 @@ My first sketches were simply small tables designed for a phone using data from 
 <div class="two-by">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
 	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+
 </div>
 
 As the concept became clearer, the tables became bigger, more interesting, and much more opinionated.
 
-<img src="{{site.baseurl | asset_path: page.id}}/table-3.jpg">
+<img style="width:100%;" src="{{ page.slug }}/table-3.jpg">
+
 
 I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
