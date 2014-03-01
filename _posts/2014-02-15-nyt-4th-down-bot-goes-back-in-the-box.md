@@ -72,7 +72,6 @@ My first sketches were simply small tables designed for a phone using data from 
 <div class="two-by">
 	<img src="/{{site.baseurl}}{{page.slug}}/table-1.jpg">
 	<img src="/{{site.baseurl}}{{page.slug}}/table-2.jpg">
-
 </div>
 
 As the concept became clearer, the tables became bigger, more interesting, and much more opinionated.
