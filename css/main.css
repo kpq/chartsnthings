@@ -91,6 +91,10 @@ a:visited { color: #333; }
   background-color: chartreuse;
 }
 
+.post img {
+  max-width: 100%;
+}
+
 /*****************************************************************************/
 /*
 /* Site
@@ -121,7 +125,6 @@ letter-spacing: 0px;
 
 .title a {
   color:chartreuse;
-
 }
 /*
 .title a:hover {
