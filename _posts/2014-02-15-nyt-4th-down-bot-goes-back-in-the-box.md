@@ -70,8 +70,8 @@ Without getting into the moving parts too much, because it's insanely boring, th
 My first sketches were simply small tables designed for a phone using data from the 2012 season. 
 
 <div class="two-by">
-	<img src="/{{page.slug}}/table-1.jpg">
-	<img src="/{{page.slug}}/table-2.jpg">
+	<img src="/{{site.baseurl}}{{page.slug}}/table-1.jpg">
+	<img src="/{{site.baseurl}}{{page.slug}}/table-2.jpg">
 
 </div>
 
@@ -82,49 +82,49 @@ As the concept became clearer, the tables became bigger, more interesting, and m
 
 I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
-<img src="/{{page.slug}}/table-4.jpg">
+<img src="/{{site.baseurl}}{{page.slug}}/table-4.jpg">
 
 We then started giving the robot more of a mouth. 
 
-<img src="/{{page.slug}}/table-5.jpg">
+<img src="/{{site.baseurl}}{{page.slug}}/table-5.jpg">
 
 A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. 
 
-<img src="/{{page.slug}}/table-6.jpg">
-<img src="/{{page.slug}}/table-7.jpg">
+<img src="/{{site.baseurl}}{{page.slug}}/table-6.jpg">
+<img src="/{{site.baseurl}}{{page.slug}}/table-7.jpg">
 
 The more we designed, the more we realized most people would be coming to the "play" pages directly from Twitter, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.
 
-<img src="/{{page.slug}}/simple-sentence.png">
+<img src="/{{site.baseurl}}{{page.slug}}/simple-sentence.png">
 
 By that point, the robot had become a real thing (even [fooling our friend](https://twitter.com/arnicas/status/410063538997039104) Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.
 
 <div class="big">
-	<img src="/{{page.slug}}/progression.jpg">
+	<img src="/{{site.baseurl}}{{page.slug}}/progression.jpg">
 </div>
 
 And what that looks like in Modo, the 3D program Shan used to render it.
 
-<img src="/{{page.slug}}/image.png">
+<img src="/{{site.baseurl}}{{page.slug}}/image.png">
 
 
 Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "ashamed" bot's lack of self-control.)
 
-<img src="/{{page.slug}}/jd-concepts.png">
+<img src="/{{site.baseurl}}{{page.slug}}/jd-concepts.png">
 
 In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including [dogging you](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/guacamole.html) for making nachos):
 
 <div class="bot-grid">
-	<img src="/{{page.slug}}/phone.png">
-	<img src="/{{page.slug}}/angry.png">
-	<img src="/{{page.slug}}/depressed.png">
-	<img src="/{{page.slug}}/teatime.png">
-	<img src="/{{page.slug}}/guac.png">
-	<img src="/{{page.slug}}/reading-medium.png">
-	<img src="/{{page.slug}}/respect.png">
-	<img src="/{{page.slug}}/professor.png">
-	<img src="/{{page.slug}}/thoughtful.png">
-	<img src="/{{page.slug}}/touchdown.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/phone.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/angry.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/depressed.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/teatime.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/guac.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/reading-medium.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/respect.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/professor.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/thoughtful.png">
+	<img src="/{{site.baseurl}}{{page.slug}}/touchdown.png">
 </div>
 
 By the end of the season, it had more than 10,000 Twitter followers – in the process, winning two bets with Marc Lavalee (original bet was 5,000 followers and then a double-or-nothing), who is now obligated to buy a beer for "every man, woman and child" in the NYT newsroom.
