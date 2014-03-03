@@ -2,7 +2,7 @@
 layout: post
 title:  "NYT 4th Down Bot"
 date:   2014-02-15 17:01:51
-slug: /post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box
+slug: 2014-02-nyt-4th-down-bot-goes-back-in-the-box
 ---
 
 <style type="text/css">
@@ -16,7 +16,7 @@ slug: /post-assets/2014-02-nyt-4th-down-bot-goes-back-in-the-box
 
 .big {
 	margin-left: -175px;
-	max-width: 1050px;	
+	max-width: 1050px;
 }
 
 .big img {
@@ -59,69 +59,69 @@ margin-right: 16px;
 
 </style>
 
-For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about a project like this for years – Amanda Cox forwarded me David Romer’s [paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) at least three years ago – but the fall of 2013 was really the first time I felt like I was equipped to actually make a project like this happen. 
+For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about a project like this for years – Amanda Cox forwarded me David Romer’s [paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) at least three years ago – but the fall of 2013 was really the first time I felt like I was equipped to actually make a project like this happen.
 
 Earlier in the year, while working on a [graphic about the draft](http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0), I had spoken with Brian Burke, the creator of the popular football analytics web site [Advanced NFL Stats](http://www.advancednflstats.com/). I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he'd be willing to create an API for his [4th Down Calculator](http://wp.advancednflstats.com/4thdncalc1.php) for a joint venture once the season started. He said yes, and I told him I'd be in touch in a few months.
 
 Without getting into the moving parts too much, because it's insanely boring, the app is quite complicated. We're watching a live data feed of every NFL game (provided by a Canadian company called [SportsDirect](http://www.sportsdirectinc.com/content/), processing the feed to determine the situation and result of the play, hitting an API representing Brian Burke's 4th Down with that game situation, processing the response and publishing new data files to S3. Once we get the play from SportsDirect, the whole process takes about a minute. (Before Tom Giratikanon got involved, it took a lot longer than that – without him, the app would still be sitting on my Desktop.)
 
-My first sketches were simply small tables designed for a phone using data from the 2012 season. 
+My first sketches were simply small tables designed for a phone using data from the 2012 season.
 
 <div class="two-by">
-	<img src="{{site.baseurl | asset_path: page.id}}/table-1.jpg">
-	<img src="{{site.baseurl | asset_path: page.id}}/table-2.jpg">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-1.jpg">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-2.jpg">
 </div>
 
 As the concept became clearer, the tables became bigger, more interesting, and much more opinionated.
 
-<img style="width:100%;" src="{{site.baseurl | asset_path: page.id}}/table-3.jpg">
+<img style="width:100%;" src="{{site.baseurl}}/post-assets/{{page.slug}}/table-3.jpg">
 
 
 I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
-<img src="{{site.baseurl | asset_path: page.id}}/table-4.jpg">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-4.jpg">
 
-We then started giving the robot more of a mouth. 
+We then started giving the robot more of a mouth.
 
-<img src="{{site.baseurl | asset_path: page.id}}/table-5.jpg">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-5.jpg">
 
-A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports. 
+A few sketches later, we were really emphasizing the throwback style of 1980s computers and printers in the bot’s reports.
 
-<img src="{{site.baseurl | asset_path: page.id}}/table-6.jpg">
-<img src="{{site.baseurl | asset_path: page.id}}/table-7.jpg">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-6.jpg">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-7.jpg">
 
 The more we designed, the more we realized most people would be coming to the "play" pages directly from Twitter, so we had to make them as clear as possible to the uninitated – this is why each robot decision comes with a dead simple sentence that says exactly what it is.
 
-<img src="{{site.baseurl | asset_path: page.id}}/simple-sentence.png">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/simple-sentence.png">
 
 By that point, the robot had become a real thing (even [fooling our friend](https://twitter.com/arnicas/status/410063538997039104) Lynn Cherny). The drawings and renderings are from Jennifer Daniel and Shan Carter, who worked in a back-and-forth style, bringing the bot to life using Modo and Adobe Illustrator.
 
 <div class="big">
-	<img src="{{site.baseurl | asset_path: page.id}}/progression.jpg">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/progression.jpg">
 </div>
 
 And what that looks like in Modo, the 3D program Shan used to render it.
 
-<img src="{{site.baseurl | asset_path: page.id}}/image.png">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/image.png">
 
 
 Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "ashamed" bot's lack of self-control.)
 
-<img src="{{site.baseurl | asset_path: page.id}}/jd-concepts.png">
+<img src="{{site.baseurl}}/post-assets/{{page.slug}}/jd-concepts.png">
 
 In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including [dogging you](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/guacamole.html) for making nachos):
 
 <div class="bot-grid">
-	<img src="{{site.baseurl | asset_path: page.id}}/phone.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/angry.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/depressed.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/teatime.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/guac.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/reading-medium.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/respect.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/professor.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/thoughtful.png">
-	<img src="{{site.baseurl | asset_path: page.id}}/touchdown.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/phone.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/angry.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/depressed.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/teatime.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/guac.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/reading-medium.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/respect.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/professor.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/thoughtful.png">
+	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/touchdown.png">
 </div>
 
 By the end of the season, it had more than 10,000 Twitter followers – in the process, winning two bets with Marc Lavalee (original bet was 5,000 followers and then a double-or-nothing), who is now obligated to buy a beer for "every man, woman and child" in the NYT newsroom.
@@ -130,11 +130,11 @@ Still, it's certainly not perfect. Here are some things that are wrong with it:
 
 - It probably took too long to launch. We published around Week 13. Officially we missed our goal by only five days, but in retrospect we could have published something less polished and improved it as it gained momentum. (This is hard for us newspaper people to do.)
 
-- It could feel more “live”. The lag between the end of the play and the analysis takes about a minute, but sometimes the delay on the play-by-play data lagged a bit, which meant you were getting bot analysis well after the other team started its drive. This isn't ideal, but there just isn't much we could do about it. 
+- It could feel more “live”. The lag between the end of the play and the analysis takes about a minute, but sometimes the delay on the play-by-play data lagged a bit, which meant you were getting bot analysis well after the other team started its drive. This isn't ideal, but there just isn't much we could do about it.
 
 - Because it was programmed to analyze decisions that already happened, some aspects of N.F.L. play aren't captured well. For example, when a team intentionally takes a penalty on 4th and 1 near midfield, the bot applauds the punt on 4th and 6 without properly scolding the 4th and 1. This [particularly annoyed](https://twitter.com/FO_ASchatz/status/422195580639936512) Aaron Schatz of Football Outsiders, who later [got over it](https://twitter.com/FO_ASchatz/status/422447526407864320).
 
-- As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year. 
+- As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year.
 
 Here's a list of notable 4th Down bot links for the offseason:
 
