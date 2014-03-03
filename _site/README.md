@@ -1,4 +1,0 @@
-chartsnthings
-=============
-
-port o tumblr
