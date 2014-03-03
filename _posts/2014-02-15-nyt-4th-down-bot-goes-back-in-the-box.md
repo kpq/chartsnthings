@@ -59,9 +59,7 @@ margin-right: 16px;
 
 </style>
 
-I've been meaning to write this for a while, and now that the Super Bowl has been done for two weeks, the newsworthiness of this post is near its absolute minumim, but let’s not waste too much time worrying about that, shall we?
-
-For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about the project for a while – ever since first reading David Romer’s [signature paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) on the subject a few years back – but the fall of 2013 was really the first time I felt like I was equipped to actually <em>make</em> even a crude demo. 
+For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a real-time tool that analyzed N.F.L. 4th down decisions in real time. I had been thinking about a project like this for years – Amanda Cox forwarded me David Romer’s [paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) at least three years ago – but the fall of 2013 was really the first time I felt like I was equipped to actually make a project like this happen. 
 
 Earlier in the year, while working on a [graphic about the draft](http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0), I had spoken with Brian Burke, the creator of the popular football analytics web site [Advanced NFL Stats](http://www.advancednflstats.com/). I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he'd be willing to create an API for his [4th Down Calculator](http://wp.advancednflstats.com/4thdncalc1.php) for a joint venture once the season started. He said yes, and I told him I'd be in touch in a few months.
 
