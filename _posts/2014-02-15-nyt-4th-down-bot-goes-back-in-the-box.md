@@ -2,6 +2,7 @@
 layout: post
 title:  "NYT 4th Down Bot"
 date:   2014-03-04 17:01:51
+slug: 2014-02-nyt-4th-down-bot-goes-back-in-the-box
 ---
 
 <style type="text/css">
