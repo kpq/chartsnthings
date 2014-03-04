@@ -16,7 +16,7 @@ slug: 2014-02-nyt-4th-down-bot-goes-back-in-the-box
 
 .big {
 	margin-left: -175px;
-	max-width: 1050px;
+	width: 1050px;
 }
 
 .big img {
@@ -51,6 +51,10 @@ margin-right: 16px;
 		width:100%;
 	}
 
+	.big {
+		width: 100%;
+	}
+
 }
 
 
@@ -59,7 +63,7 @@ margin-right: 16px;
 
 </style>
 
-For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a news application that analyzed N.F.L. 4th down decisions in real time. I had been thinking about a project like this for years – Amanda Cox forwarded me David Romer’s [paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) at least three years ago – but the fall of 2013 was really the first time I felt like I was equipped to actually make a project like this happen.
+For most of the fall, some colleagues and I developed [NYT 4th Down Bot](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/), a news application that analyzed N.F.L. 4th down decisions in real time. I had been thinking about a project like this for a long time – Amanda Cox forwarded me David Romer’s [paper](http://elsa.berkeley.edu/~dromer/papers/JPE_April06.pdf) at least three years ago – but the fall of 2013 was really the first time I felt like I was equipped to actually make a project like this happen.
 
 Earlier in the year, while working on a [graphic about the draft](http://www.nytimes.com/interactive/2013/04/25/sports/football/picking-the-best-in-the-nfl-draft.html?_r=0), I had spoken with Brian Burke, the creator of the popular football analytics web site [Advanced NFL Stats](http://www.advancednflstats.com/). I explained my idea to him (roughly, a web site that analyzed every 4th down of every game) and asked him if he'd be willing to create an API for his [4th Down Calculator](http://wp.advancednflstats.com/4thdncalc1.php) for a joint venture once the season started. He said yes, and I told him I'd be in touch in a few months.
 
@@ -79,7 +83,7 @@ As the concept became clearer, the tables became bigger, more interesting, and m
 <img style="width:100%;" src="{{site.baseurl}}/post-assets/{{page.slug}}/table-3.jpg">
 
 
-I had been working on a demo for weeks before the Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", which is less fun.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
+I had been working on a demo for weeks before Shan Carter and Jen Daniel suggested the idea of personifying Brian's model. (Originally, the tables simply compared "Coach says" to "math says", clearly boring in retrospect.) This first started with "NYT Coachbot", a flat vector drawing from Jennifer.
 
 <img src="{{site.baseurl}}/post-assets/{{page.slug}}/table-4.jpg">
 
@@ -111,7 +115,7 @@ Here are some of Jennifer's thoughts on reactions he could have. (Bummer about "
 
 <img src="{{site.baseurl}}/post-assets/{{page.slug}}/jd-concepts.png">
 
-In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th down bot liked to do (including [dogging you](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/guacamole.html) for making nachos). It even [fooled our friend](https://twitter.com/arnicas/status/410063538997039104) Lynn Cherny when it signed off one night, which is almost as great as that time it was a [copy editor](http://graphics8.nytimes.com/newsgraphics/2013/11/28/fourth-downs/assets/static-images/copy.jpg) on the foreign desk.
+In the end, we didn't make all those poses, but we did do a lot of fun ones that really brought the concept to life. Here are all the things the 4th Down Bot liked to do (including [dogging you](http://www.nytimes.com/newsgraphics/2013/11/28/fourth-downs/guacamole.html) for making nachos). It even [fooled our friend](https://twitter.com/arnicas/status/410063538997039104) Lynn Cherny when it [signed off](https://twitter.com/NYT4thDownBot/status/409903997244276736) one night, which is almost as great as that time it was a [copy editor](http://graphics8.nytimes.com/newsgraphics/2013/11/28/fourth-downs/assets/static-images/copy.jpg) on the foreign desk.
 
 Here are all the poses Shan put the bot in at one point or another:
 
@@ -128,7 +132,7 @@ Here are all the poses Shan put the bot in at one point or another:
 	<img src="{{site.baseurl}}/post-assets/{{page.slug}}/touchdown.png">
 </div>
 
-By the end of the season, it had more than 10,000 Twitter followers – in the process, winning two bets with Marc Lavalee (original bet was 5,000 followers and then a double-or-nothing), who is now obligated to buy a beer for "every man, woman and child" in the NYT newsroom. It also caught the attention of various [famous economists](https://twitter.com/R_Thaler/status/430103904278167552) and [CEOs of Twitter](https://twitter.com/dickc/status/430125767867891712). 
+By the end of the season, it had more than 10,000 Twitter followers and caught the attention of various [famous economists](https://twitter.com/R_Thaler/status/430103904278167552) and [CEOs of Twitter](https://twitter.com/dickc/status/430125767867891712). 
 
 Still, it's certainly not perfect. Here are some things that are wrong with it:
 
@@ -140,9 +144,9 @@ Still, it's certainly not perfect. Here are some things that are wrong with it:
 
 - As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year.
 
-Still, although I'm biased, I think was a successful, well-executed project and a novel use of technology for news. Tom Giratikanon even gave the project his highest praise: both "not the worst" and "worth doing." Hopefully we introduce a cousin or two this summer, too. If not, preseason is only 6 months away.
+Still, although we're biased, we think was a successful, well-executed project and a novel use of technology for news. Tom Giratikanon even gave the project his highest praise: both "not the worst" and "worth doing."
 
-In the meantime, here's a list of notable NYT 4th Down bot links for the offseason (and if there are others, I'm happy to add them):
+Here's a list of notable NYT 4th Down Bot links for the offseason (and if there are others, I'm happy to add them):
 
 - [An intro post](http://www.advancednflstats.com/2013/12/new-feature-nyt-4th-down-bot.html) from Brian Burke when it was launched. "Even <em>I'm</em> tired of analyzing 4th downs."
 
@@ -158,7 +162,7 @@ In the meantime, here's a list of notable NYT 4th Down bot links for the offseas
 
 - Nate Silver devoted a few paragraphs of his [ESPN magazine cover story](http://espn.go.com/espn/story/_/id/10476210/nba-mlb-embrace-analytics-nfl-reluctant-espn-magazine) on the bot.
 
-
+We're hoping to introduce a cousin or two this summer, too. If not, well, preseason is only 6 months away.
 
 
 
