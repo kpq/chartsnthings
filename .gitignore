@@ -7,7 +7,6 @@ pkg/
 _site/
 .bundle/
 bbin/
-gh-pages/
 site/_site/
 coverage
 .ruby-version
