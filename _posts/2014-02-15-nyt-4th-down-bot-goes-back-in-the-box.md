@@ -144,7 +144,7 @@ Still, it's certainly not perfect. Here are some things that are wrong with it:
 
 - As many statisticians noted, it could display uncertainty better than it does. From my perspective, that's the most legitimate criticism, and we hope to improve on it next year.
 
-Still, although we're biased, we think was a successful, well-executed project and a novel use of technology for news. Tom Giratikanon even gave the project his highest praise: both "not the worst" and "worth doing."
+Still, although we're biased, we think it was a successful, well-executed project and a novel use of technology for news. Tom Giratikanon even gave the project his highest praise: both "worth doing" and "not the worst."
 
 Here's a list of notable NYT 4th Down Bot links for the offseason (and if there are others, I'm happy to add them):
 
