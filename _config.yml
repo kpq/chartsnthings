@@ -3,3 +3,5 @@ markdown: redcarpet
 pygments: true
 baseurl: /chartsnthings
 permalink: /:year/:month/:title.html
+description: Charts and other junk from Kevin Quealy
+url: http://kpq.github.io
