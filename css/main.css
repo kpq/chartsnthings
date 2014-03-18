@@ -95,6 +95,10 @@ a:visited { color: #333; }
   max-width: 100%;
 }
 
+.foot {
+  margin-top:40px;
+}
+
 /*****************************************************************************/
 /*
 /* Site
@@ -110,6 +114,10 @@ a:visited { color: #333; }
 
 .header a {
   text-decoration: none;
+}
+
+.header {
+  position: relative;
 }
 
 .title {
@@ -148,11 +156,12 @@ letter-spacing: 0px;
 }
 
 .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
+    font-size: 80%;
+    color: #666;
+    border-top: 4px solid #eee;
+    margin-top: 20px;
+    overflow: hidden;
+    padding-top: 20px;
 }
 
 .footer .contact {
@@ -244,6 +253,18 @@ td {
   float:right;
 }
 
+.atom-link {
+color: #bbb !important;
+float: right;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 2px;
+font-family: arial;
+font-size: 9px;
+position: absolute;
+top: 13px;
+right: 10px;
+}
 
 
 /***********
