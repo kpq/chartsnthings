@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: simple
 title: The month in abandoned charts
 date: 2014-05-23
 slug: 2014-05-loose-sketches
