@@ -3,7 +3,7 @@ layout: simple
 title: The month in abandoned charts
 date: 2014-05-23
 slug: 2014-05-loose-sketches
-link: http://kpq.github.io/chartsnthings/2014/05-loose-sketches.html
+link: http://kpq.github.io/chartsnthings/2014/05/loose-sketches.html
 ---
 
 <img src="{{site.baseurl}}/post-assets/{{page.slug}}/Screenshot 2014-04-07 17.16.37.png">
